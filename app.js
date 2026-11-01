@@ -1,4 +1,4 @@
-// Lesebuch – webes demó (statikus, APK nélkül)
+﻿// Lesebuch – webes demó (statikus, APK nélkül)
 (() => {
   "use strict";
 
@@ -14,16 +14,9 @@
     section: null,
     book: null,
     situation: null,
+    cursor: 1,
+    picks: {},
     quiz: null,
-  };
-
-  const shuffle = (items) => {
-    const copy = [...items];
-    for (let i = copy.length - 1; i > 0; i -= 1) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy;
   };
 
   // ---------- segédek ----------
@@ -51,15 +44,9 @@
     const word = raw.toLowerCase().trim();
     if (state.words[word]) return state.words[word];
     const stems = [
-      word.replace(/e$/, ""),
-      word.replace(/en$/, ""),
-      word.replace(/n$/, ""),
-      word.replace(/er$/, ""),
-      word.replace(/es$/, ""),
-      word.replace(/s$/, ""),
-      word.replace(/t$/, ""),
-      word.replace(/em$/, ""),
-      word.replace(/te$/, ""),
+      word.replace(/e$/, ""), word.replace(/en$/, ""), word.replace(/n$/, ""),
+      word.replace(/er$/, ""), word.replace(/es$/, ""), word.replace(/s$/, ""),
+      word.replace(/t$/, ""), word.replace(/em$/, ""), word.replace(/te$/, ""),
     ];
     for (const stem of stems) {
       if (stem.length > 2 && state.words[stem]) return state.words[stem];
@@ -68,58 +55,21 @@
   }
 
   const SCENES = {
-    AMAZON: ["#2f6b52", "#173c2c"],
-    SNOW: ["#7e97ad", "#2f4356"],
-    TRAIN: ["#a4552e", "#5a2a17"],
-    SEA: ["#3f7f97", "#1c4354"],
-    DESERT: ["#c99a4a", "#7a5320"],
-    CITY: ["#5b5f7a", "#292c3d"],
-    FOREST: ["#55734f", "#2a3c26"],
-    MOUNTAIN: ["#7b7f8a", "#3a3d46"],
-    NIGHT: ["#3a4a70", "#161d30"],
-    SUN: ["#d0a14a", "#8a5b1e"],
-    LEAVES: ["#8a9a4f", "#4c5c2a"],
-    FLOWERS: ["#c07a8a", "#6d3a46"],
+    AMAZON: ["#2f6b52", "#173c2c"], SNOW: ["#7e97ad", "#2f4356"],
+    TRAIN: ["#a4552e", "#5a2a17"], SEA: ["#3f7f97", "#1c4354"],
+    DESERT: ["#c99a4a", "#7a5320"], CITY: ["#5b5f7a", "#292c3d"],
+    FOREST: ["#55734f", "#2a3c26"], MOUNTAIN: ["#7b7f8a", "#3a3d46"],
+    NIGHT: ["#3a4a70", "#161d30"], SUN: ["#d0a14a", "#8a5b1e"],
+    LEAVES: ["#8a9a4f", "#4c5c2a"], FLOWERS: ["#c07a8a", "#6d3a46"],
     RAIN: ["#6b7f8f", "#333f4a"],
-    BALCONY: ["#c2794a", "#6d3a1f"],
-    WINDOW: ["#8fa9c0", "#3f5568"],
-    CAFE: ["#a9764a", "#5a3a1f"],
-    HOUSE: ["#8a8fa0", "#3c4050"],
-    MUSIC: ["#8a6a9a", "#463254"],
-    BOOK: ["#5f8a84", "#2b4a46"],
-    MARKET: ["#c9a44e", "#6f4d1a"],
-    LETTER: ["#b3a06a", "#5c4f28"],
   };
 
-  const SCENE_ICONS = {
-    AMAZON: "🌴",
-    SNOW: "❄️",
-    TRAIN: "🚂",
-    SEA: "🌊",
-    DESERT: "🌵",
-    CITY: "🏙️",
-    FOREST: "🌲",
-    MOUNTAIN: "⛰️",
-    NIGHT: "🌙",
-    SUN: "☀️",
-    LEAVES: "🍃",
-    FLOWERS: "🌸",
-    RAIN: "🌧️",
-    BALCONY: "🪴",
-    WINDOW: "🪟",
-    CAFE: "☕",
-    HOUSE: "🏠",
-    MUSIC: "🎵",
-    BOOK: "📖",
-    MARKET: "🛒",
-    LETTER: "✉️",
-  };
-
-  const coverIcon = (book) => SCENE_ICONS[book.cover] || "📖";
-
-  function coverStyle(book) {
+  function coverMarkup(book, className = "cover") {
+    if (book.coverImage) {
+      return `<img class="${className}" src="${escapeHtml(book.coverImage)}" alt="">`;
+    }
     const palette = SCENES[book.cover] || SCENES.LEAVES;
-    return `background:linear-gradient(160deg, ${palette[0]}, ${palette[1]});`;
+    return `<span class="${className} glyph" style="background:linear-gradient(160deg, ${palette[0]}, ${palette[1]})">📖</span>`;
   }
 
   const levelById = (id) => state.menu.levels.find((level) => level.id === id);
@@ -134,7 +84,7 @@
   // ---------- nézetek ----------
 
   function renderShell({ title, subtitle, back, chip, body }) {
-    const top = `
+    app.innerHTML = `
       <div class="topbar">
         ${back ? `<button class="back" data-back aria-label="Vissza">←</button>` : ""}
         <div>
@@ -142,51 +92,42 @@
           ${subtitle ? `<div class="sub">${escapeHtml(subtitle)}</div>` : ""}
         </div>
         ${chip ? `<span class="chip">${escapeHtml(chip)}</span>` : ""}
-      </div>`;
-    app.innerHTML = top + body;
+      </div>
+      ${body}`;
     window.scrollTo({ top: 0 });
   }
 
   function renderHome() {
-    const levels = state.menu.levels
-      .map((level) => {
-        const locked = level.sections.every((section) => !section.enabled || section.count === 0);
-        const open = level.id === state.level;
-        const options = level.sections
-          .map((section) => `
-            <button class="option" data-section="${section.id}" ${section.enabled && section.count > 0 ? "" : "disabled"}>
-              <span class="glyph">${section.id === "situations" ? "💬" : section.id === "stories" ? "📖" : "📚"}</span>
-              <span class="text">
-                <b>${escapeHtml(section.title)}</b>
-                <span>${escapeHtml(sectionSubtitle(section))}</span>
-              </span>
-              <span class="arrow">›</span>
-            </button>`)
-          .join("");
-        return `
-          <div class="level ${locked ? "locked" : ""}">
-            <div class="level-head" ${locked ? "" : `data-level="${level.id}"`}>
-              <h2>${escapeHtml(level.name)}</h2>
-              <span class="de">${escapeHtml(level.subtitle)}</span>
-              <span class="meta ${locked ? "soon" : ""}">${locked ? "Hamarosan" : "elérhető"}</span>
-            </div>
-            ${open && !locked ? `<div class="sections">${options}</div>` : ""}
-          </div>`;
-      })
-      .join("");
+    const levels = state.menu.levels.map((level) => {
+      const locked = level.sections.every((section) => !section.enabled || section.count === 0);
+      const open = level.id === state.level;
+      const options = level.sections.map((section) => `
+        <button class="option" data-section="${section.id}" ${section.enabled && section.count > 0 ? "" : "disabled"}>
+          <span class="glyph">${section.id === "situations" ? "💬" : section.id === "stories" ? "📖" : "📚"}</span>
+          <span class="text"><b>${escapeHtml(section.title)}</b><span>${escapeHtml(sectionSubtitle(section))}</span></span>
+          <span class="arrow">›</span>
+        </button>`).join("");
+      return `
+        <div class="level ${locked ? "locked" : ""}">
+          <div class="level-head" ${locked ? "" : `data-level="${level.id}"`}>
+            <h2>${escapeHtml(level.name)}</h2>
+            <span class="de">${escapeHtml(level.subtitle)}</span>
+            <span class="meta ${locked ? "soon" : ""}">${locked ? "Hamarosan" : "elérhető"}</span>
+          </div>
+          ${open && !locked ? `<div class="sections">${options}</div>` : ""}
+        </div>`;
+    }).join("");
 
     renderShell({
       title: "Lesebuch",
-      subtitle: "Németül olvasni – lépésről lépésre",
+      subtitle: "",
       back: false,
       chip: "DEMÓ",
       body: `
         <div class="hero">
           <p class="tagline">Válassz szintet, majd egy olvasnivalót. Koppints a mondatra a magyarért, a szóra a jelentésért.</p>
         </div>
-        <div class="demo-note">
-          Ez egy demó: korlátozott tartalommal. A teljes app a Play Áruházban jelenik meg.
-        </div>
+        <div class="demo-note">Ez egy demó: korlátozott tartalommal. A teljes app a Play Áruházban jelenik meg.</div>
         <div class="levels">${levels}</div>
         <div class="foot">Lesebuch demó · A1–B1 · német–magyar olvasó</div>`,
     });
@@ -216,7 +157,7 @@
         chip: "DEMÓ",
         body: `<div class="list">${situations.map((situation) => `
           <button class="card" data-situation="${escapeHtml(situation.id)}">
-            <span class="cover" style="${coverStyle({ cover: "CITY" })}">💬</span>
+            ${coverMarkup({ cover: "CITY" })}
             <span class="body">
               <b>${escapeHtml(situation.titleHu)}</b>
               <small>${escapeHtml(situation.titleDe)} · ${escapeHtml(situation.group.hu)}</small>
@@ -236,7 +177,7 @@
         chip: "DEMÓ",
         body: `<div class="list">${books.map((book) => `
           <button class="card" data-book="${escapeHtml(book.id)}">
-            <span class="cover" style="${coverStyle(book)}">${coverIcon(book)}</span>
+            ${coverMarkup(book)}
             <span class="body">
               <b>${escapeHtml(book.titleHu)}</b>
               <small>${escapeHtml(book.titleDe)} · ${escapeHtml(book.seriesHu)}</small>
@@ -255,9 +196,10 @@
       chip: "DEMÓ",
       body: `<div class="grid">${books.map((book) => `
         <button class="book" data-book="${escapeHtml(book.id)}">
-          <span class="cover" style="${coverStyle(book)}">${coverIcon(book)}</span>
+          ${coverMarkup(book)}
           <b>${escapeHtml(book.titleHu)}</b>
           <small>${escapeHtml(book.seriesHu)}</small>
+          <p>${escapeHtml(book.blurb)}</p>
         </button>`).join("")}</div>`,
     });
   }
@@ -273,27 +215,19 @@
   }
 
   function renderReader(book) {
-    const sentences = book.sentences
-      .map((sentence) => `
-        <p class="sent">
-          ${wrapWords(sentence.de)}
-          <span class="hu">${escapeHtml(sentence.hu)}</span>
-        </p>`)
-      .join("");
+    const sentences = book.sentences.map((sentence) => `
+      <p class="sent">${wrapWords(sentence.de)}<span class="hu">${escapeHtml(sentence.hu)}</span></p>`).join("");
 
     renderShell({
-      title: "Lesebuch",
-      subtitle: "",
+      title: book.titleHu,
+      subtitle: book.titleDe,
       back: true,
       chip: book.kind === "novella" ? "RÖVID TÖRTÉNET" : "OLVASMÁNY",
       body: `
         <div class="reader">
           <div class="meta">${escapeHtml(book.seriesHu || "")}</div>
-          <h2 class="title">${escapeHtml(book.titleHu)}</h2>
-          <div class="meta">${escapeHtml(book.titleDe)}</div>
           <div class="toolbar">
             <button class="pill" data-toggle-hu>Magyar megjelenítése</button>
-            <button class="pill" data-quiz="word">Kvíz</button>
           </div>
           <div class="text">${sentences}</div>
           ${book.tip ? `<div class="tip"><b>Aha! tipp</b><br>${escapeHtml(book.tip)}</div>` : ""}
@@ -307,15 +241,45 @@
     });
   }
 
-  function renderDialogue(situation) {
-    const bubbles = (situation.turns || [])
-      .map((turn, index) => `
-        <div class="bubble ${index % 2 === 0 ? "a" : "b"}">
-          <span class="who">${escapeHtml(turn.speaker || "")}</span>
-          ${escapeHtml(turn.de)}
-          <span class="hu">${escapeHtml(turn.hu)}</span>
-        </div>`)
-      .join("");
+  function renderDialogue() {
+    const situation = state.situation;
+    const turns = situation.turns;
+    const picks = state.picks;
+
+    // Nem választós fordulatok automatikusan megjelennek.
+    while (state.cursor < turns.length && !turns[state.cursor].options?.length) {
+      state.cursor += 1;
+    }
+
+    const visible = [];
+    for (let index = 0; index < state.cursor; index += 1) {
+      const turn = turns[index];
+      if (turn.options?.length) {
+        const pick = picks[index];
+        if (pick) visible.push({ speaker: turn.speaker, de: pick.de, hu: pick.hu });
+      } else if (turn.de) {
+        visible.push(turn);
+      }
+    }
+
+    const bubbles = visible.map((turn, index) => `
+      <div class="bubble ${index % 2 === 0 ? "a" : "b"}">
+        <span class="who">${escapeHtml(turn.speaker || "")}</span>
+        ${escapeHtml(turn.de)}
+        <span class="hu">${escapeHtml(turn.hu)}</span>
+      </div>`).join("");
+
+    const current = turns[state.cursor];
+    const choice = current && current.options?.length
+      ? `<div class="choice">
+           <span class="label">Te válaszolsz · ${escapeHtml(current.speaker)}</span>
+           ${current.options.map((option) => `
+             <button data-choice="${escapeHtml(option.de)}">
+               ${escapeHtml(option.de)}
+               <span class="hu">${escapeHtml(option.hu)}</span>
+             </button>`).join("")}
+         </div>`
+      : "";
 
     renderShell({
       title: situation.titleHu,
@@ -326,148 +290,11 @@
         <div class="reader">
           <div class="toolbar">
             <button class="pill" data-toggle-hu>Magyar megjelenítése</button>
-            <button class="pill" data-quiz="situation">Kvíz</button>
           </div>
           <div class="chat">${bubbles}</div>
           ${situation.tip ? `<div class="tip"><b>Aha! tipp</b><br>${escapeHtml(situation.tip)}</div>` : ""}
-        </div>`,
-    });
-  }
-
-  // ---------- kvíz ----------
-
-  const MAX_QUESTIONS = 8;
-
-  function pickWords(book) {
-    const seen = new Map();
-    for (const sentence of book.sentences) {
-      for (const match of sentence.de.matchAll(WORD_RE)) {
-        const word = match[0].toLowerCase();
-        if (word.length >= 4 && state.words[word] && !seen.has(word)) {
-          seen.set(word, match[0]);
-        }
-      }
-    }
-    return [...seen.entries()].map(([key, display]) => ({ key, display }));
-  }
-
-  function buildWordQuiz(book) {
-    // A zavaró opciókhoz csak tiszta, kisbetűs, rövid jelentések kellenek
-    // (nincs bennük zárójeles alapszó, és nem tulajdonnevek).
-    const allMeanings = Object.values(state.words).filter(
-      (meaning) =>
-        meaning &&
-        meaning.length <= 40 &&
-        !meaning.includes("(") &&
-        !/^[A-ZÁÉÍÓÖŐÚÜŰ]/.test(meaning)
-    );
-    return shuffle(pickWords(book))
-      .slice(0, MAX_QUESTIONS)
-      .map(({ key, display }) => {
-        const correct = state.words[key];
-        const options = new Set([correct]);
-        let guard = 0;
-        while (options.size < 4 && guard < 300) {
-          guard += 1;
-          const candidate = allMeanings[Math.floor(Math.random() * allMeanings.length)];
-          if (candidate && candidate !== correct) options.add(candidate);
-        }
-        return { prompt: display, correct, options: shuffle([...options]) };
-      });
-  }
-
-  function buildSituationQuiz(situation) {
-    const phrases = (situation.phrases || []).filter((phrase) => phrase.de && phrase.hu);
-    return shuffle(phrases)
-      .slice(0, 6)
-      .map((phrase) => {
-        const others = shuffle(phrases.filter((item) => item.de !== phrase.de)).slice(0, 3);
-        return {
-          prompt: phrase.hu,
-          correct: phrase.de,
-          options: shuffle([phrase.de, ...others.map((item) => item.de)]),
-        };
-      });
-  }
-
-  function startQuiz(kind, source) {
-    const questions =
-      kind === "word" ? buildWordQuiz(source) : buildSituationQuiz(source);
-    if (questions.length === 0) return;
-    state.quiz = {
-      kind,
-      source,
-      questions,
-      index: 0,
-      score: 0,
-      answered: null,
-    };
-    state.view = "quiz";
-    renderQuiz();
-  }
-
-  function renderQuiz() {
-    const quiz = state.quiz;
-    if (!quiz) {
-      renderHome();
-      return;
-    }
-
-    if (quiz.index >= quiz.questions.length) {
-      renderShell({
-        title: "Kvíz",
-        subtitle: quiz.kind === "word" ? "Szavak" : "Párbeszéd",
-        back: true,
-        chip: "DEMÓ",
-        body: `
-          <div class="result">
-            <p>Eredmény</p>
-            <div class="score">${quiz.score} / ${quiz.questions.length}</div>
-            <p>${quiz.score === quiz.questions.length ? "Hibátlan!" : "Jó gyakorlás — menj tovább a következő történetre!"}</p>
-            <div class="toolbar" style="justify-content:center">
-              <button class="pill primary" data-restart>Újra</button>
-              <button class="pill" data-back>Vissza</button>
-            </div>
-          </div>`,
-      });
-      return;
-    }
-
-    const question = quiz.questions[quiz.index];
-    const answered = quiz.answered;
-
-    const options = question.options
-      .map((option) => {
-        let cls = "answer";
-        if (answered !== null) {
-          if (option === question.correct) cls += " correct";
-          else if (option === answered) cls += " wrong";
-        }
-        return `<button class="${cls}" data-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`;
-      })
-      .join("");
-
-    const feedback =
-      answered === null
-        ? "&nbsp;"
-        : answered === question.correct
-          ? "Helyes!"
-          : `Nem talált. A helyes: „${escapeHtml(question.correct)}”.`;
-
-    renderShell({
-      title: "Kvíz",
-      subtitle: quiz.kind === "word" ? "Mit jelent ez a szó?" : "Melyik német mondat jelenti ezt?",
-      back: true,
-      chip: "DEMÓ",
-      body: `
-        <div class="quiz">
-          <div class="progress">${quiz.index + 1} / ${quiz.questions.length} · ${quiz.score} pont</div>
-          <div class="prompt">${quiz.kind === "word" ? "Szó:" : "Magyar mondat:"}</div>
-          <div class="word">${escapeHtml(question.prompt)}</div>
-          <div class="answers">${options}</div>
-          <div class="feedback">${feedback}</div>
-          <div class="actions">${answered !== null ? '<button class="pill primary" data-next>Következő</button>' : ""}</div>
-        </div>`,
+        </div>
+        ${choice}`,
     });
   }
 
@@ -477,16 +304,6 @@
     const target = event.target;
 
     if (target.closest("[data-back]")) {
-      if (state.view === "quiz" && state.quiz) {
-        if (state.quiz.kind === "word" && state.quiz.source.sentences) {
-          state.view = "reader";
-          renderReader(state.quiz.source);
-        } else {
-          state.view = "dialogue";
-          renderDialogue(state.quiz.source);
-        }
-        return;
-      }
       if (state.view === "reader" || state.view === "dialogue") {
         state.view = "section";
         renderSection();
@@ -495,48 +312,6 @@
         renderHome();
       }
       return;
-    }
-
-    const quizButton = target.closest("[data-quiz]");
-    if (quizButton) {
-      if (quizButton.dataset.quiz === "word" && state.book) {
-        startQuiz("word", state.book);
-      } else if (state.situation) {
-        startQuiz("situation", state.situation);
-      }
-      return;
-    }
-
-    if (state.view === "quiz" && state.quiz) {
-      const answerButton = target.closest("[data-answer]");
-      if (answerButton && state.quiz.answered === null) {
-        const answer = answerButton.dataset.answer;
-        state.quiz.answered = answer;
-        if (answer === state.quiz.questions[state.quiz.index].correct) {
-          state.quiz.score += 1;
-        }
-        renderQuiz();
-        return;
-      }
-
-      if (target.closest("[data-next]")) {
-        state.quiz.index += 1;
-        state.quiz.answered = null;
-        renderQuiz();
-        return;
-      }
-
-      if (target.closest("[data-restart]")) {
-        state.quiz.index = 0;
-        state.quiz.score = 0;
-        state.quiz.answered = null;
-        state.quiz.questions =
-          state.quiz.kind === "word"
-            ? buildWordQuiz(state.quiz.source)
-            : buildSituationQuiz(state.quiz.source);
-        renderQuiz();
-        return;
-      }
     }
 
     if (target.closest("[data-level]")) {
@@ -549,7 +324,7 @@
     if (sectionButton) {
       state.section = sectionButton.dataset.section;
       state.view = "section";
-      history.replaceState(null, "", `#/s/${state.section}`);
+      history.replaceState(null, "", "#/s/" + state.section);
       renderSection();
       return;
     }
@@ -560,7 +335,7 @@
       if (book) {
         state.book = book;
         state.view = "reader";
-        history.replaceState(null, "", `#/b/${book.id}`);
+        history.replaceState(null, "", "#/b/" + book.id);
         renderReader(book);
       }
       return;
@@ -568,14 +343,28 @@
 
     const situationButton = target.closest("[data-situation]");
     if (situationButton) {
-      const situation = state.situations.groups
-        .flatMap((group) => group.situations)
+      const situation = state.situations.groups.flatMap((group) => group.situations)
         .find((item) => item.id === situationButton.dataset.situation);
       if (situation) {
         state.situation = situation;
+        state.cursor = 1;
+        state.picks = {};
         state.view = "dialogue";
-        history.replaceState(null, "", `#/d/${situation.id}`);
-        renderDialogue(situation);
+        history.replaceState(null, "", "#/d/" + situation.id);
+        renderDialogue();
+      }
+      return;
+    }
+
+    const choiceButton = target.closest("[data-choice]");
+    if (choiceButton && state.situation) {
+      const turns = state.situation.turns;
+      const current = turns[state.cursor];
+      const option = current.options.find((item) => item.de === choiceButton.dataset.choice);
+      if (option) {
+        state.picks[state.cursor] = option;
+        state.cursor += 1;
+        renderDialogue();
       }
       return;
     }
@@ -638,6 +427,7 @@
       if (book) {
         state.book = book;
         state.view = "reader";
+        history.replaceState(null, "", "#/b/" + book.id);
         renderReader(book);
         return;
       }
@@ -648,26 +438,10 @@
         .find((item) => item.id === hash.slice(2));
       if (situation) {
         state.situation = situation;
+        state.cursor = 1;
+        state.picks = {};
         state.view = "dialogue";
-        renderDialogue(situation);
-        return;
-      }
-    }
-    if (hash.startsWith("qword/")) {
-      const book = findBook(hash.slice(6));
-      if (book) {
-        state.book = book;
-        startQuiz("word", book);
-        return;
-      }
-    }
-    if (hash.startsWith("qsit/")) {
-      const situation = state.situations.groups
-        .flatMap((group) => group.situations)
-        .find((item) => item.id === hash.slice(5));
-      if (situation) {
-        state.situation = situation;
-        startQuiz("situation", situation);
+        renderDialogue();
         return;
       }
     }

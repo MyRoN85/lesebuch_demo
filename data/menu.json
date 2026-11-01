@@ -4,13 +4,12 @@
     {
       "id": "A1",
       "name": "A1",
-      "subtitle": "Első lépések",
-      "description": "Rövid, egyszerű szövegek mindennapi témákban.",
+      "subtitle": "Kezdő",
       "sections": [
         {
-          "id": "situations",
-          "title": "Mindennapi helyzetek",
-          "count": 1,
+          "id": "stories",
+          "title": "Olvasmányok",
+          "count": 10,
           "enabled": true
         },
         {
@@ -26,9 +25,9 @@
           "enabled": false
         },
         {
-          "id": "stories",
-          "title": "Olvasmányok",
-          "count": 10,
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
+          "count": 1,
           "enabled": true
         }
       ]
@@ -36,12 +35,11 @@
     {
       "id": "A2",
       "name": "A2",
-      "subtitle": "Építkezés",
-      "description": "Hosszabb szövegek, több nyelvtannal.",
+      "subtitle": "Alapszint",
       "sections": [
         {
-          "id": "situations",
-          "title": "Mindennapi helyzetek",
+          "id": "stories",
+          "title": "Olvasmányok",
           "count": 0,
           "enabled": false
         },
@@ -58,8 +56,8 @@
           "enabled": false
         },
         {
-          "id": "stories",
-          "title": "Olvasmányok",
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
           "count": 0,
           "enabled": false
         }
@@ -68,12 +66,11 @@
     {
       "id": "B1",
       "name": "B1",
-      "subtitle": "Önálló olvasás",
-      "description": "Összetettebb történetek, irodalmi szövegek.",
+      "subtitle": "Középhaladó",
       "sections": [
         {
-          "id": "situations",
-          "title": "Mindennapi helyzetek",
+          "id": "stories",
+          "title": "Olvasmányok",
           "count": 0,
           "enabled": false
         },
@@ -90,8 +87,8 @@
           "enabled": false
         },
         {
-          "id": "stories",
-          "title": "Olvasmányok",
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
           "count": 0,
           "enabled": false
         }

@@ -2,42 +2,6 @@
   "level": "A1",
   "books": [
     {
-      "id": "balkon",
-      "titleDe": "Mein Balkon",
-      "titleHu": "Az erkélyem",
-      "subtitleDe": "Kleine Dinge, großes Glück",
-      "blurb": "Paradicsom, fűszernövények, nyugalom.",
-      "cover": "BALCONY",
-      "seriesDe": "Zuhause",
-      "seriesHu": "Otthon",
-      "sentences": [
-        {
-          "de": "Auf meinem Balkon wachsen Tomaten und Kräuter.",
-          "hu": "Az erkélyemen paradicsom és fűszernövények nőnek."
-        },
-        {
-          "de": "Jeden Abend gieße ich die Blumen.",
-          "hu": "Minden este meglocsolom a virágokat."
-        },
-        {
-          "de": "Im Sommer lese ich hier ein Buch.",
-          "hu": "Nyáron itt olvasok egy könyvet."
-        },
-        {
-          "de": "Die Nachbarn sagen immer freundlich hallo.",
-          "hu": "A szomszédok mindig barátságosan köszönnek."
-        },
-        {
-          "de": "Heute ist es zu windig, deshalb bleibe ich drinnen.",
-          "hu": "Ma túl szeles az idő, ezért bent maradok."
-        },
-        {
-          "de": "Der Balkon ist klein, aber er ist mein Lieblingsplatz.",
-          "hu": "Az erkély kicsi, de ez a kedvenc helyem."
-        }
-      ]
-    },
-    {
       "id": "a1-zuhause-01",
       "titleDe": "Der Wecker",
       "titleHu": "Az ébresztőóra",
@@ -46,6 +10,7 @@
       "cover": "WINDOW",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-01.jpg",
       "sentences": [
         {
           "de": "Der Wecker klingelt um sechs Uhr.",
@@ -82,6 +47,7 @@
       "cover": "CAFE",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-02.jpg",
       "sentences": [
         {
           "de": "Tom steht in der Küche und sucht die Milch.",
@@ -122,6 +88,7 @@
       "cover": "BALCONY",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-03.jpg",
       "sentences": [
         {
           "de": "Auf dem Balkon sitzt Minka in der Sonne.",
@@ -166,6 +133,7 @@
       "cover": "HOUSE",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-04.jpg",
       "sentences": [
         {
           "de": "Heute ist Samstag und die Wohnung ist schmutzig.",
@@ -202,6 +170,7 @@
       "cover": "MUSIC",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-05.jpg",
       "sentences": [
         {
           "de": "Jeden Abend spielt die Nachbarin Klavier.",
@@ -242,6 +211,7 @@
       "cover": "BOOK",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-06.jpg",
       "sentences": [
         {
           "de": "Es ist acht Uhr und draußen ist es dunkel.",
@@ -286,6 +256,7 @@
       "cover": "RAIN",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-07.jpg",
       "sentences": [
         {
           "de": "Am Morgen ist das Bad immer besetzt.",
@@ -322,6 +293,7 @@
       "cover": "MARKET",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-08.jpg",
       "sentences": [
         {
           "de": "Am Samstag gehen Lena und Tom auf den Markt.",
@@ -362,6 +334,7 @@
       "cover": "LETTER",
       "seriesDe": "Zuhause",
       "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-09.jpg",
       "sentences": [
         {
           "de": "Am Morgen findet Lena einen Zettel unter der Tür.",
@@ -394,6 +367,51 @@
         {
           "de": "Nach einer Woche kommt die Nachbarin zurück und sagt danke.",
           "hu": "Egy hét után visszajön a szomszédasszony, és megköszöni."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-10",
+      "titleDe": "Der große Putztag",
+      "titleHu": "A nagy takarítás",
+      "subtitleDe": "Samstag in der Wohnung",
+      "blurb": "Seprű, porszívó és egy lusta macska.",
+      "cover": "HOUSE",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "coverImage": "assets/covers/a1/a1-zuhause-10.jpg",
+      "sentences": [
+        {
+          "de": "Am Samstag räumen Lena und Tom die Wohnung auf.",
+          "hu": "Szombaton Lena és Tom rendet rak a lakásban."
+        },
+        {
+          "de": "Tom saugt den Staub im Wohnzimmer.",
+          "hu": "Tom porszívózza a port a nappaliban."
+        },
+        {
+          "de": "Lena putzt das Bad und die Küche.",
+          "hu": "Lena kitakarítja a fürdőszobát és a konyhát."
+        },
+        {
+          "de": "Danach kehrt Tom den Flur und wischt den Boden.",
+          "hu": "Azután Tom összesöpri az előszobát, és felmossa a padlót."
+        },
+        {
+          "de": "Minka liegt auf dem Sofa und schläft.",
+          "hu": "Minka a kanapén fekszik, és alszik."
+        },
+        {
+          "de": "Am Abend haben sie alles zusammen aufgeräumt.",
+          "hu": "Estére mindent együtt elpakoltak."
+        },
+        {
+          "de": "Die Wohnung ist sauber und hell.",
+          "hu": "A lakás tiszta és világos."
+        },
+        {
+          "de": "Sie trinken Tee und lachen zusammen.",
+          "hu": "Teát isznak, és együtt nevetnek."
         }
       ]
     }

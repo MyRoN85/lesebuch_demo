@@ -2,95 +2,176 @@
   "level": "A1",
   "groups": [
     {
-      "de": "Amt und Geld",
-      "hu": "Hivatal és pénz",
+      "de": "Einkaufen",
+      "hu": "Vásárlás",
       "situations": [
         {
-          "id": "a1-amt-buergerbuero",
-          "titleDe": "Beim Bürgerbüro",
-          "titleHu": "A lakcímhivatalban",
-          "subtitleDe": "Termin, Dokumente, Formular",
+          "id": "a1-einkaufen-supermarkt",
+          "titleDe": "Im Supermarkt",
+          "titleHu": "A szupermarketben",
+          "subtitleDe": "Brot, Milch und eine Frage",
           "turns": [
             {
-              "speaker": "Mitarbeiter",
-              "de": "Guten Tag! Haben Sie einen Termin?",
-              "hu": "Jó napot! Van időpontja?"
+              "speaker": "Verkäuferin",
+              "de": "Guten Tag! Kann ich Ihnen helfen?",
+              "hu": "Jó napot! Segíthetek valamiben?",
+              "options": []
             },
             {
-              "speaker": "Kundin",
-              "de": "Ja, um zehn Uhr. Hier ist mein Ausweis.",
-              "hu": "Igen, tíz órára. Itt az igazolványom."
+              "speaker": "Kunde",
+              "de": "",
+              "hu": "",
+              "options": [
+                {
+                  "de": "Ja, danke — ich suche frisches Brot.",
+                  "hu": "Igen, köszönöm — friss kenyeret keresek."
+                },
+                {
+                  "de": "Hallo! Wo finde ich denn Brot?",
+                  "hu": "Szia! Hol találok kenyeret?"
+                },
+                {
+                  "de": "Ja, gern. Ich brauche Brot fürs Frühstück.",
+                  "hu": "Igen, szívesen. Kenyér kell a reggelihez."
+                }
+              ]
             },
             {
-              "speaker": "Mitarbeiter",
-              "de": "Danke. Wo wohnen Sie jetzt?",
-              "hu": "Köszönöm. Hol lakik most?"
+              "speaker": "Verkäuferin",
+              "de": "Das Brot ist dort hinten, links.",
+              "hu": "A kenyér ott hátul van, balra.",
+              "options": []
             },
             {
-              "speaker": "Kundin",
-              "de": "In der Gartenstraße zwölf, in Schweinfurt.",
-              "hu": "A Gartenstraße tizenkettőben, Schweinfurtban."
+              "speaker": "Kunde",
+              "de": "",
+              "hu": "",
+              "options": [
+                {
+                  "de": "Danke. Haben Sie auch Milch?",
+                  "hu": "Köszönöm. Van tejük is?"
+                },
+                {
+                  "de": "Super, danke. Und wo ist die Milch?",
+                  "hu": "Szuper, köszönöm. És hol van a tej?"
+                },
+                {
+                  "de": "Danke! Ich brauche noch Milch.",
+                  "hu": "Köszönöm! Még tejre is szükségem van."
+                }
+              ]
             },
             {
-              "speaker": "Mitarbeiter",
-              "de": "Seit wann wohnen Sie dort?",
-              "hu": "Mióta lakik ott?"
+              "speaker": "Verkäuferin",
+              "de": "Ja, im Kühlregal, neben der Butter.",
+              "hu": "Igen, a hűtőpolcon, a vaj mellett.",
+              "options": []
             },
             {
-              "speaker": "Kundin",
-              "de": "Seit dem ersten März.",
-              "hu": "Március elseje óta."
+              "speaker": "Kunde",
+              "de": "",
+              "hu": "",
+              "options": [
+                {
+                  "de": "Gut. Wie viel kostet die Milch?",
+                  "hu": "Jó. Mennyibe kerül a tej?"
+                },
+                {
+                  "de": "Perfekt — was kostet die Milch?",
+                  "hu": "Remek — mennyi a tej?"
+                },
+                {
+                  "de": "Okay, und was macht die Milch?",
+                  "hu": "Oké, és mennyi a tej?"
+                }
+              ]
             },
             {
-              "speaker": "Mitarbeiter",
-              "de": "Bitte füllen Sie das Formular aus.",
-              "hu": "Kérjük, töltse ki az űrlapot."
+              "speaker": "Verkäuferin",
+              "de": "Die große Flasche, 1,19 Euro.",
+              "hu": "A nagy üveg 1,19 euró.",
+              "options": []
             },
             {
-              "speaker": "Kundin",
-              "de": "Muss ich alles ausfüllen?",
-              "hu": "Mindent ki kell töltenem?"
+              "speaker": "Kunde",
+              "de": "",
+              "hu": "",
+              "options": [
+                {
+                  "de": "Perfekt. Ich nehme noch Käse mit.",
+                  "hu": "Remek. Még sajtot is viszek."
+                },
+                {
+                  "de": "Gut, dann noch ein Stück Käse, bitte.",
+                  "hu": "Jó, akkor még egy darab sajtot, kérem."
+                },
+                {
+                  "de": "Alles klar — und dazu noch Käse.",
+                  "hu": "Rendben — és mellé még sajtot."
+                }
+              ]
             },
             {
-              "speaker": "Mitarbeiter",
-              "de": "Nur Name, Adresse und Geburtsdatum.",
-              "hu": "Csak nevet, címet és születési dátumot."
+              "speaker": "Verkäuferin",
+              "de": "Gern. Das macht dann 3,40 Euro.",
+              "hu": "Szívesen. Akkor 3,40 euró lesz.",
+              "options": []
             },
             {
-              "speaker": "Kundin",
-              "de": "Fertig. Bekomme ich eine Bestätigung?",
-              "hu": "Kész. Kapok visszaigazolást?"
-            },
-            {
-              "speaker": "Mitarbeiter",
-              "de": "Ja, hier. Willkommen in unserer Stadt!",
-              "hu": "Igen, itt van. Üdvözöljük a városunkban!"
-            },
-            {
-              "speaker": "Kundin",
-              "de": "Vielen Dank! Auf Wiedersehen.",
-              "hu": "Nagyon köszönöm! Viszontlátásra."
+              "speaker": "Kunde",
+              "de": "",
+              "hu": "",
+              "options": [
+                {
+                  "de": "Hier bitte. Und die Quittung?",
+                  "hu": "Tessék. És a blokk?"
+                },
+                {
+                  "de": "Bitte schön. Bekomme ich eine Quittung?",
+                  "hu": "Parancsoljon. Kaphatok blokkot?"
+                },
+                {
+                  "de": "Hier, bitte. Die Quittung brauche ich auch.",
+                  "hu": "Itt van, tessék. A blokk is kell."
+                }
+              ]
             }
           ],
           "phrases": [
             {
-              "de": "Ich habe einen Termin.",
-              "hu": "Van időpontom."
+              "de": "Ich hätte gern ...",
+              "hu": "Szeretnék ..."
             },
             {
-              "de": "Welche Dokumente brauche ich?",
-              "hu": "Milyen dokumentumok kellenek?"
+              "de": "Was kostet das?",
+              "hu": "Mennyibe kerül ez?"
             },
             {
-              "de": "Wo muss ich unterschreiben?",
-              "hu": "Hol kell aláírnom?"
+              "de": "Haben Sie auch ...?",
+              "hu": "Van Önöknél ... is?"
             },
             {
-              "de": "Könnten Sie mir bitte helfen?",
-              "hu": "Tudna kérem segíteni?"
+              "de": "Ich zahle mit Karte.",
+              "hu": "Kártyával fizetek."
+            },
+            {
+              "de": "Wo finde ich das Brot?",
+              "hu": "Hol találom a kenyeret?"
+            },
+            {
+              "de": "Bekomme ich eine Quittung?",
+              "hu": "Kaphatok blokkot?"
+            },
+            {
+              "de": "Ich nehme das mit.",
+              "hu": "Elviszem."
+            },
+            {
+              "de": "Kann ich mit Karte zahlen?",
+              "hu": "Fizethetek kártyával?"
             }
           ],
-          "tip": "Az „ausfüllen” elváló igekötős ige: a „füllen” a mondat közepén, az „aus” a végén áll: „Bitte füllen Sie das Formular aus.” Ugyanezt látod a kérdésben is: „Muss ich alles ausfüllen?”"
+          "tip": "Figyeld meg az elváló igét: a „mitnehmen” igekötője a mondat végére kerül — „Ich nehme noch Käse mit.” A „mit” tehát nem elöl, hanem hátul áll."
         }
       ]
     }
