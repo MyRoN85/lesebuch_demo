@@ -1,0 +1,101 @@
+{
+  "demo": true,
+  "levels": [
+    {
+      "id": "A1",
+      "name": "A1",
+      "subtitle": "Első lépések",
+      "description": "Rövid, egyszerű szövegek mindennapi témákban.",
+      "sections": [
+        {
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
+          "count": 1,
+          "enabled": true
+        },
+        {
+          "id": "novellas",
+          "title": "Rövid történetek",
+          "count": 1,
+          "enabled": true
+        },
+        {
+          "id": "full",
+          "title": "Teljes történetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "stories",
+          "title": "Olvasmányok",
+          "count": 10,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "A2",
+      "subtitle": "Építkezés",
+      "description": "Hosszabb szövegek, több nyelvtannal.",
+      "sections": [
+        {
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "novellas",
+          "title": "Rövid történetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "full",
+          "title": "Teljes történetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "stories",
+          "title": "Olvasmányok",
+          "count": 0,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "name": "B1",
+      "subtitle": "Önálló olvasás",
+      "description": "Összetettebb történetek, irodalmi szövegek.",
+      "sections": [
+        {
+          "id": "situations",
+          "title": "Mindennapi helyzetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "novellas",
+          "title": "Rövid történetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "full",
+          "title": "Teljes történetek",
+          "count": 0,
+          "enabled": false
+        },
+        {
+          "id": "stories",
+          "title": "Olvasmányok",
+          "count": 0,
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "level": "A1",
+  "genres": [
+    {
+      "id": "kaland",
+      "de": "Abenteuer",
+      "hu": "Kaland",
+      "books": [
+        {
+          "id": "novella-a-fagy-birodalmaban-tuleles-alaszka-vadonjaban",
+          "titleDe": "Im Reich der Kälte",
+          "titleHu": "A fagy birodalmában – Túlélés Alaszka vadonjában",
+          "subtitleDe": "Überleben in der Wildnis Alaskas",
+          "blurb": "Egy kis repülőgép, egy hóvihar és egy férfi, aki nem adja fel.",
+          "cover": "AMAZON",
+          "coverPalette": 0,
+          "seriesDe": "Dschungel, Wildnis, Wüste",
+          "seriesHu": "Dzsungel, vadon, sivatagi kalandok",
+          "tip": "Észrevetted? A befejezett múltat (Perfekt) így építjük: haben + befejezett igenév. Például: „Er hat den Kampf gewonnen.“ – a hat a segédige, a gewonnen pedig a Partizip II, és a mondat végére kerül. Ugyanezt látod itt is: „Sie haben viele Fotos gemacht.“",
+          "sentences": [
+            {
+              "de": "Es ist kalt in Alaska.",
+              "hu": "Hideg van Alaszkában."
+            },
+            {
+              "de": "Über den Bergen ist der Himmel grau.",
+              "hu": "A hegyek fölött szürke az ég."
+            },
+            {
+              "de": "Ein kleines Flugzeug fliegt über den Wald.",
+              "hu": "Egy kis repülőgép repül az erdő fölött."
+            },
+            {
+              "de": "Am Steuer sitzt Tomi.",
+              "hu": "A kormánynál Tomi ül."
+            },
+            {
+              "de": "Neben ihm sitzt Máté.",
+              "hu": "Mellette ül Máté."
+            },
+            {
+              "de": "Máté ist Fotograf und Forscher.",
+              "hu": "Máté fotós és kutató."
+            },
+            {
+              "de": "Die zwei Männer sind Freunde.",
+              "hu": "A két férfi barátok."
+            },
+            {
+              "de": "Sie kommen aus Budapest.",
+              "hu": "Budapestről jönnek."
+            },
+            {
+              "de": "Sie haben viele Fotos gemacht.",
+              "hu": "Sok fotót készítettek."
+            },
+            {
+              "de": "Plötzlich macht der Motor ein lautes Geräusch.",
+              "hu": "Hirtelen hangos zajt ad a motor."
+            },
+            {
+              "de": "„Tomi, der Motor ist kaputt!“ ruft Máté.",
+              "hu": "„Tomi, elromlott a motor!” – kiáltja Máté."
+            },
+            {
+              "de": "Das Flugzeug sinkt schnell.",
+              "hu": "A repülőgép gyorsan süllyed."
+            },
+            {
+              "de": "Tomi sieht nur Schnee und Bäume.",
+              "hu": "Tomi csak havat és fákat lát."
+            },
+            {
+              "de": "Es gibt hier keine Straße und kein Haus.",
+              "hu": "Itt nincs út és ház."
+            },
+            {
+              "de": "„Wir müssen auf dem Fluss landen!“ ruft Tomi.",
+              "hu": "„A folyón kell landolnunk!” – kiáltja Tomi."
+            },
+            {
+              "de": "Aber der Fluss ist weit weg.",
+              "hu": "De a folyó messze van."
+            },
+            {
+              "de": "Die Bäume kommen immer näher.",
+              "hu": "A fák egyre közelebb kerülnek."
+            },
+            {
+              "de": "Dann gibt es ein lautes Krachen.",
+              "hu": "Aztán hangos reccsenés hallatszik."
+            },
+            {
+              "de": "Alles wird ganz weiß.",
+              "hu": "Minden teljesen fehér lesz."
+            },
+            {
+              "de": "Dann wird es ganz dunkel.",
+              "hu": "Aztán teljesen sötét lesz."
+            },
+            {
+              "de": "Máté wacht langsam auf.",
+              "hu": "Máté lassan felébred."
+            },
+            {
+              "de": "Sein Gesicht ist kalt.",
+              "hu": "Hideg az arca."
+            },
+            {
+              "de": "Die Luft ist wie Eis.",
+              "hu": "A levegő olyan, mint a jég."
+            },
+            {
+              "de": "Der Schnee liegt hoch.",
+              "hu": "Magasan áll a hó."
+            },
+            {
+              "de": "Máté steigt aus dem Wrack.",
+              "hu": "Máté kiszáll a roncsból."
+            },
+            {
+              "de": "„Tomi! Wo bist du?“ ruft er.",
+              "hu": "„Tomi! Hol vagy?” – kiáltja."
+            },
+            {
+              "de": "Tomi sitzt im Schnee.",
+              "hu": "Tomi a hóban ül."
+            },
+            {
+              "de": "Er ist still und bewegt sich nicht.",
+              "hu": "Csendes, és nem mozdul."
+            },
+            {
+              "de": "Máté findet keinen Puls.",
+              "hu": "Máté nem talál pulzust."
+            },
+            {
+              "de": "Er weint nicht, aber er ist sehr traurig.",
+              "hu": "Nem sír, de nagyon szomorú."
+            },
+            {
+              "de": "Die Sonne geht bald unter.",
+              "hu": "A nap hamarosan lemegy."
+            },
+            {
+              "de": "Máté sucht Sachen im Wrack.",
+              "hu": "Máté dolgokat keres a roncsban."
+            },
+            {
+              "de": "Er findet eine warme Jacke.",
+              "hu": "Talál egy meleg dzsekit."
+            },
+            {
+              "de": "Er findet ein Messer und Streichhölzer.",
+              "hu": "Talál egy kést és gyufát."
+            },
+            {
+              "de": "Er hat auch Wasser und etwas Essen.",
+              "hu": "Vize és egy kis étele is van."
+            },
+            {
+              "de": "Er baut ein Lager aus Schnee und Ästen.",
+              "hu": "Hóból és ágakból épít egy tábort."
+            },
+            {
+              "de": "Er macht ein kleines Feuer.",
+              "hu": "Kis tüzet gyújt."
+            },
+            {
+              "de": "Das Feuer ist warm.",
+              "hu": "A tűz meleg."
+            },
+            {
+              "de": "In der Nacht hört er ein Heulen.",
+              "hu": "Éjszaka vonyítást hall."
+            },
+            {
+              "de": "Es sind viele Wölfe.",
+              "hu": "Sok farkas van."
+            },
+            {
+              "de": "Sie kommen immer näher.",
+              "hu": "Egyre közelebb jönnek."
+            },
+            {
+              "de": "Am Morgen ist alles still.",
+              "hu": "Reggel minden csendes."
+            },
+            {
+              "de": "Máté nimmt seinen Rucksack und das Messer.",
+              "hu": "Máté magához veszi a hátizsákját és a kést."
+            },
+            {
+              "de": "Er geht nach Süden.",
+              "hu": "Dél felé indul."
+            },
+            {
+              "de": "Der Weg ist sehr weit.",
+              "hu": "Az út nagyon hosszú."
+            },
+            {
+              "de": "Er muss durch hohen Schnee gehen.",
+              "hu": "Magas hóban kell mennie."
+            },
+            {
+              "de": "Jeder Schritt ist schwer.",
+              "hu": "Minden lépés nehéz."
+            },
+            {
+              "de": "Am Nachmittag kommt Wind.",
+              "hu": "Délután szél támad."
+            },
+            {
+              "de": "Der Wind ist kalt und stark.",
+              "hu": "A szél hideg és erős."
+            },
+            {
+              "de": "Da sieht Máté Spuren im Schnee.",
+              "hu": "Ekkor nyomokat lát a hóban."
+            },
+            {
+              "de": "Die Spuren sind groß.",
+              "hu": "A nyomok nagyok."
+            },
+            {
+              "de": "Hinter ihm sind Wölfe.",
+              "hu": "Mögötte farkasok vannak."
+            },
+            {
+              "de": "Sechs oder sieben Tiere laufen langsam.",
+              "hu": "Hat-hét állat lassan halad."
+            },
+            {
+              "de": "Sie warten auf seine Schwäche.",
+              "hu": "Várják a gyengeségét."
+            },
+            {
+              "de": "Máté bleibt still stehen.",
+              "hu": "Máté mozdulatlanul megáll."
+            },
+            {
+              "de": "Er nimmt eine letzte Rakete.",
+              "hu": "Elvesz egy utolsó rakétát."
+            },
+            {
+              "de": "Er zündet die Rakete an.",
+              "hu": "Meggyújtja a rakétát."
+            },
+            {
+              "de": "Die Rakete fliegt in die Luft.",
+              "hu": "A rakéta a levegőbe repül."
+            },
+            {
+              "de": "Es gibt ein helles rotes Licht.",
+              "hu": "Fényes vörös fény támad."
+            },
+            {
+              "de": "Die Wölfe laufen weg.",
+              "hu": "A farkasok elfutnak."
+            },
+            {
+              "de": "Aber sie kommen wieder.",
+              "hu": "De visszatérnek."
+            },
+            {
+              "de": "Am vierten Tag kommt ein Schneesturm.",
+              "hu": "A negyedik napon hóvihar jön."
+            },
+            {
+              "de": "Der Wind ist sehr stark.",
+              "hu": "Nagyon erős a szél."
+            },
+            {
+              "de": "Der Schnee fliegt durch die Luft.",
+              "hu": "A hó repül a levegőben."
+            },
+            {
+              "de": "Máté sieht fast nichts.",
+              "hu": "Máté szinte semmit sem lát."
+            },
+            {
+              "de": "Er ist sehr müde.",
+              "hu": "Nagyon fáradt."
+            },
+            {
+              "de": "Seine Hände sind kalt und rot.",
+              "hu": "A kezei hidegek és pirosak."
+            },
+            {
+              "de": "Sein Wasser ist weg.",
+              "hu": "Elfogyott a vize."
+            },
+            {
+              "de": "Er kann nicht weitergehen.",
+              "hu": "Nem tud továbbmenni."
+            },
+            {
+              "de": "Er findet ein Loch im Felsen.",
+              "hu": "Talál egy lyukat a sziklában."
+            },
+            {
+              "de": "Es ist wie eine kleine Höhle.",
+              "hu": "Olyan, mint egy kis barlang."
+            },
+            {
+              "de": "Er setzt sich in die Höhle.",
+              "hu": "Leül a barlangba."
+            },
+            {
+              "de": "Draußen tobt der Sturm.",
+              "hu": "Odakint tombol a vihar."
+            },
+            {
+              "de": "Dann sieht er zwei Augen im Dunkeln.",
+              "hu": "Aztán két szemet lát a sötétben."
+            },
+            {
+              "de": "Es sind zwei Wölfe.",
+              "hu": "Két farkas."
+            },
+            {
+              "de": "Sie sind sehr hungrig.",
+              "hu": "Nagyon éhesek."
+            },
+            {
+              "de": "Máté hat nur sein Messer.",
+              "hu": "Máténak csak a kése van."
+            },
+            {
+              "de": "Ein Wolf kommt langsam näher.",
+              "hu": "Az egyik farkas lassan közelebb jön."
+            },
+            {
+              "de": "Máté springt schnell auf.",
+              "hu": "Máté gyorsan felugrik."
+            },
+            {
+              "de": "Er schreit laut und hält das Messer vor sich.",
+              "hu": "Hangosan ordít, és maga elé tartja a kést."
+            },
+            {
+              "de": "Der Wolf blutet und läuft weg.",
+              "hu": "A farkas vérzik, és elfut."
+            },
+            {
+              "de": "Die zwei Wölfe laufen in den Sturm.",
+              "hu": "A két farkas a viharba fut."
+            },
+            {
+              "de": "Máté legt sich auf den Schnee.",
+              "hu": "Máté a hóra fekszik."
+            },
+            {
+              "de": "Sein Arm blutet auch.",
+              "hu": "A karja is vérzik."
+            },
+            {
+              "de": "Am nächsten Morgen ist der Sturm weg.",
+              "hu": "Másnap reggelre elmúlt a vihar."
+            },
+            {
+              "de": "Der Himmel ist blau und klar.",
+              "hu": "Az ég kék és tiszta."
+            },
+            {
+              "de": "Máté kriecht aus der Höhle.",
+              "hu": "Máté kimászik a barlangból."
+            },
+            {
+              "de": "Er hört einen Motor.",
+              "hu": "Motort hall."
+            },
+            {
+              "de": "Es ist ein Hubschrauber.",
+              "hu": "Ez egy helikopter."
+            },
+            {
+              "de": "Der Hubschrauber kommt näher.",
+              "hu": "A helikopter közelebb jön."
+            },
+            {
+              "de": "Máté findet trockenes Holz.",
+              "hu": "Máté száraz fát talál."
+            },
+            {
+              "de": "Er macht ein großes Feuer.",
+              "hu": "Nagy tüzet gyújt."
+            },
+            {
+              "de": "Schwarzer Rauch steigt in den Himmel.",
+              "hu": "Fekete füst száll az égbe."
+            },
+            {
+              "de": "Der Hubschrauber landet auf dem Schnee.",
+              "hu": "A helikopter leszáll a hóra."
+            },
+            {
+              "de": "Ein Retter springt aus der Tür.",
+              "hu": "Egy mentő ugrik ki az ajtón."
+            },
+            {
+              "de": "Er hat eine warme Decke und Medikamente.",
+              "hu": "Meleg takarója és gyógyszerei vannak."
+            },
+            {
+              "de": "„Er lebt noch!“ ruft der Retter.",
+              "hu": "„Még él!” – kiáltja a mentő."
+            },
+            {
+              "de": "Máté trinkt etwas warmes Wasser.",
+              "hu": "Máté iszik egy kis meleg vizet."
+            },
+            {
+              "de": "Er sitzt im Hubschrauber und schaut zurück.",
+              "hu": "A helikopterben ül, és visszanéz."
+            },
+            {
+              "de": "Der Wald ist still und weiß.",
+              "hu": "Az erdő csendes és fehér."
+            },
+            {
+              "de": "Er hat den Kampf gewonnen.",
+              "hu": "Megnyerte a küzdelmet."
+            },
+            {
+              "de": "Die Kälte ist stark, aber Máté ist stärker.",
+              "hu": "A hideg erős, de Máté erősebb."
+            },
+            {
+              "de": "Diese Geschichte bleibt für immer in seinem Herzen.",
+              "hu": "Ez a történet örökre a szívében marad."
+            },
+            {
+              "de": "Er hat alles überlebt.",
+              "hu": "Mindent túlélt."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

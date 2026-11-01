@@ -1,0 +1,401 @@
+{
+  "level": "A1",
+  "books": [
+    {
+      "id": "balkon",
+      "titleDe": "Mein Balkon",
+      "titleHu": "Az erkélyem",
+      "subtitleDe": "Kleine Dinge, großes Glück",
+      "blurb": "Paradicsom, fűszernövények, nyugalom.",
+      "cover": "BALCONY",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Auf meinem Balkon wachsen Tomaten und Kräuter.",
+          "hu": "Az erkélyemen paradicsom és fűszernövények nőnek."
+        },
+        {
+          "de": "Jeden Abend gieße ich die Blumen.",
+          "hu": "Minden este meglocsolom a virágokat."
+        },
+        {
+          "de": "Im Sommer lese ich hier ein Buch.",
+          "hu": "Nyáron itt olvasok egy könyvet."
+        },
+        {
+          "de": "Die Nachbarn sagen immer freundlich hallo.",
+          "hu": "A szomszédok mindig barátságosan köszönnek."
+        },
+        {
+          "de": "Heute ist es zu windig, deshalb bleibe ich drinnen.",
+          "hu": "Ma túl szeles az idő, ezért bent maradok."
+        },
+        {
+          "de": "Der Balkon ist klein, aber er ist mein Lieblingsplatz.",
+          "hu": "Az erkély kicsi, de ez a kedvenc helyem."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-01",
+      "titleDe": "Der Wecker",
+      "titleHu": "Az ébresztőóra",
+      "subtitleDe": "Ein Morgen beginnt",
+      "blurb": "Csörög az óra, Minka már ébren van.",
+      "cover": "WINDOW",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Der Wecker klingelt um sechs Uhr.",
+          "hu": "Az ébresztőóra hat órakor csörög."
+        },
+        {
+          "de": "Lena steht langsam auf und öffnet das Fenster.",
+          "hu": "Lena lassan felkel, és kinyitja az ablakot."
+        },
+        {
+          "de": "Minka sitzt auf dem Bett und wartet.",
+          "hu": "Minka az ágyon ül és vár."
+        },
+        {
+          "de": "Tom schläft noch, denn er mag den Morgen nicht.",
+          "hu": "Tom még alszik, mert nem szereti a reggelt."
+        },
+        {
+          "de": "In der Küche duftet der frische Kaffee.",
+          "hu": "A konyhában friss kávé illata terjeng."
+        },
+        {
+          "de": "Lena trinkt eine Tasse und lacht leise.",
+          "hu": "Lena megiszik egy csésze kávét, és halkan nevet."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-02",
+      "titleDe": "Ohne Milch",
+      "titleHu": "Tej nélkül",
+      "subtitleDe": "Frühstück in der Küche",
+      "blurb": "Üres hűtő, forró tea, egy kis nevetés.",
+      "cover": "CAFE",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Tom steht in der Küche und sucht die Milch.",
+          "hu": "Tom a konyhában áll, és a tejet keresi."
+        },
+        {
+          "de": "Der Kühlschrank ist fast leer.",
+          "hu": "A hűtőszekrény majdnem üres."
+        },
+        {
+          "de": "Im Kühlschrank steht nur eine Flasche Wasser.",
+          "hu": "A hűtőben csak egy üveg víz van."
+        },
+        {
+          "de": "Tom macht Tee und isst trockenes Brot.",
+          "hu": "Tom teát készít, és száraz kenyeret eszik."
+        },
+        {
+          "de": "Lena kommt in die Küche und riecht den Tee.",
+          "hu": "Lena bejön a konyhába, és megérzi a tea illatát."
+        },
+        {
+          "de": "Sie lacht und geht schnell zum Laden.",
+          "hu": "Nevet egyet, és gyorsan elmegy a boltba."
+        },
+        {
+          "de": "Am Abend ist der Kühlschrank wieder voll.",
+          "hu": "Estére a hűtő újra tele van."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-03",
+      "titleDe": "Minkas Balkon",
+      "titleHu": "Minka erkélye",
+      "subtitleDe": "Sonne und Tomaten",
+      "blurb": "Napfény, paradicsom és puha mancsok.",
+      "cover": "BALCONY",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Auf dem Balkon sitzt Minka in der Sonne.",
+          "hu": "Az erkélyen Minka ül a napon."
+        },
+        {
+          "de": "Lena gießt die Tomaten und die Kräuter.",
+          "hu": "Lena megöntözi a paradicsomokat és a fűszernövényeket."
+        },
+        {
+          "de": "Die Blätter sind grün und die Tomaten rot.",
+          "hu": "A levelek zöldek, a paradicsomok pirosak."
+        },
+        {
+          "de": "Nebenan hört sie leise Musik.",
+          "hu": "A szomszédból halk zene szűrődik át."
+        },
+        {
+          "de": "Der Nachbar von oben grüßt freundlich.",
+          "hu": "A felső szomszéd barátságosan köszön."
+        },
+        {
+          "de": "Tom bringt zwei Gläser und den Kuchen.",
+          "hu": "Tom két poharat és a süteményt hozza."
+        },
+        {
+          "de": "Sie essen zusammen und schauen auf die Straße.",
+          "hu": "Együtt esznek, és az utcát nézik."
+        },
+        {
+          "de": "Minka schläft und träumt von der Sonne.",
+          "hu": "Minka alszik, és a napról álmodik."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-04",
+      "titleDe": "Der Staub",
+      "titleHu": "A por",
+      "subtitleDe": "Samstag ist Putztag",
+      "blurb": "Seprű, vödör, és egy kíváncsi macska.",
+      "cover": "HOUSE",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Heute ist Samstag und die Wohnung ist schmutzig.",
+          "hu": "Ma szombat van, és a lakás piszkos."
+        },
+        {
+          "de": "Tom putzt das Wohnzimmer und das Bad.",
+          "hu": "Tom kitakarítja a nappalit és a fürdőszobát."
+        },
+        {
+          "de": "Lena wäscht die Fenster und die Teller.",
+          "hu": "Lena megmossa az ablakokat és a tányérokat."
+        },
+        {
+          "de": "Minka findet den Besen sehr spannend.",
+          "hu": "Minkát nagyon izgatja a seprű."
+        },
+        {
+          "de": "Sie springt auf den Tisch und alles wird nass.",
+          "hu": "Felugrik az asztalra, és minden vizes lesz."
+        },
+        {
+          "de": "Am Abend ist alles sauber und die Katze müde.",
+          "hu": "Estére minden tiszta, és a macska fáradt."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-05",
+      "titleDe": "Die Nachbarin",
+      "titleHu": "A szomszédasszony",
+      "subtitleDe": "Musik durch die Wand",
+      "blurb": "Zongora a fal mögül és fahéjas süti.",
+      "cover": "MUSIC",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Jeden Abend spielt die Nachbarin Klavier.",
+          "hu": "A szomszédasszony minden este zongorázik."
+        },
+        {
+          "de": "Lena hört die Musik durch die Wand.",
+          "hu": "Lena a falon át hallja a zenét."
+        },
+        {
+          "de": "Heute klingelt die Nachbarin an der Tür.",
+          "hu": "Ma becsönget a szomszédasszony."
+        },
+        {
+          "de": "Sie bringt einen Kuchen mit Zimt.",
+          "hu": "Fahéjas süteményt hoz."
+        },
+        {
+          "de": "Lena und Tom machen Kaffee für sie.",
+          "hu": "Lena és Tom kávét főz neki."
+        },
+        {
+          "de": "Sie sprechen über Musik, Katzen und die Stadt.",
+          "hu": "Zenéről, macskákról és a városról beszélgetnek."
+        },
+        {
+          "de": "Minka sitzt auf dem Stuhl und schläft.",
+          "hu": "Minka a széken ül, és alszik."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-06",
+      "titleDe": "Ein ruhiger Abend",
+      "titleHu": "Egy csendes este",
+      "subtitleDe": "Tee und ein Buch",
+      "blurb": "Lámpafény, tea, csend és egy macska.",
+      "cover": "BOOK",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Es ist acht Uhr und draußen ist es dunkel.",
+          "hu": "Nyolc óra van, és odakint sötét van."
+        },
+        {
+          "de": "Lena sitzt auf dem Sofa und liest ein Buch.",
+          "hu": "Lena a kanapén ül, és egy könyvet olvas."
+        },
+        {
+          "de": "Tom macht das Licht an und setzt sich neben sie.",
+          "hu": "Tom felkapcsolja a lámpát, és leül mellé."
+        },
+        {
+          "de": "Auf dem Tisch stehen Tee und Kekse.",
+          "hu": "Az asztalon tea és keksz van."
+        },
+        {
+          "de": "Minka liegt auf dem Teppich und schläft.",
+          "hu": "Minka a szőnyegen fekszik, és alszik."
+        },
+        {
+          "de": "Im Radio spielt leise Musik.",
+          "hu": "A rádióban halkan szól a zene."
+        },
+        {
+          "de": "Sie sprechen nicht viel, aber sie sind glücklich.",
+          "hu": "Nem beszélnek sokat, de boldogok."
+        },
+        {
+          "de": "Um zehn Uhr gehen sie schlafen.",
+          "hu": "Tíz órakor lefekszenek aludni."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-07",
+      "titleDe": "Das Bad",
+      "titleHu": "A fürdőszoba",
+      "subtitleDe": "Ein nasser Morgen",
+      "blurb": "Kopogás az ajtón, sietős reggel.",
+      "cover": "RAIN",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Am Morgen ist das Bad immer besetzt.",
+          "hu": "Reggel a fürdőszoba mindig foglalt."
+        },
+        {
+          "de": "Tom wartet vor der Tür und klopft laut.",
+          "hu": "Tom az ajtó előtt vár, és hangosan kopog."
+        },
+        {
+          "de": "Lena ruft, sie braucht noch eine Minute.",
+          "hu": "Lena kiált, hogy még egy percre szüksége van."
+        },
+        {
+          "de": "Draußen regnet es und Tom wird nervös.",
+          "hu": "Kint esik az eső, és Tom ideges lesz."
+        },
+        {
+          "de": "Endlich ist das Bad frei.",
+          "hu": "Végre szabad a fürdőszoba."
+        },
+        {
+          "de": "Tom fährt mit dem Fahrrad zur Arbeit.",
+          "hu": "Tom kerékpárral megy dolgozni."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-08",
+      "titleDe": "Auf dem Markt",
+      "titleHu": "A piacon",
+      "subtitleDe": "Frische Tomaten kaufen",
+      "blurb": "Piaci nyüzsgés és egy elveszett pénz.",
+      "cover": "MARKET",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Am Samstag gehen Lena und Tom auf den Markt.",
+          "hu": "Szombaton Lena és Tom kimegy a piacra."
+        },
+        {
+          "de": "Der Markt ist klein, aber die Tomaten sind frisch.",
+          "hu": "A piac kicsi, de a paradicsom friss."
+        },
+        {
+          "de": "Lena kauft Äpfel, Tomaten und Kräuter.",
+          "hu": "Lena almát, paradicsomot és fűszernövényeket vesz."
+        },
+        {
+          "de": "Tom sucht sein Geld, aber er findet es nicht.",
+          "hu": "Tom keresi a pénzét, de nem találja."
+        },
+        {
+          "de": "Eine Frau lacht und gibt ihm einen Euro.",
+          "hu": "Egy asszony nevet, és ad neki egy eurót."
+        },
+        {
+          "de": "Tom bezahlt und lächelt sie freundlich an.",
+          "hu": "Tom fizet, és barátságosan rámosolyog."
+        },
+        {
+          "de": "Zu Hause macht Lena einen Salat.",
+          "hu": "Otthon Lena salátát készít."
+        }
+      ]
+    },
+    {
+      "id": "a1-zuhause-09",
+      "titleDe": "Der Zettel",
+      "titleHu": "A cédula",
+      "subtitleDe": "Hilfe für die Blumen",
+      "blurb": "Egy cetli az ajtó alatt, virágok, szomszédok.",
+      "cover": "LETTER",
+      "seriesDe": "Zuhause",
+      "seriesHu": "Otthon",
+      "sentences": [
+        {
+          "de": "Am Morgen findet Lena einen Zettel unter der Tür.",
+          "hu": "Reggel Lena egy cetlit talál az ajtó alatt."
+        },
+        {
+          "de": "Die Nachbarin ist für eine Woche in Wien.",
+          "hu": "A szomszédasszony egy hétre Bécsbe utazott."
+        },
+        {
+          "de": "Lena liest den Zettel und lächelt.",
+          "hu": "Lena elolvassa a cetlit, és elmosolyodik."
+        },
+        {
+          "de": "Die Nachbarin braucht Hilfe für ihre Blumen.",
+          "hu": "A szomszédasszonynak segítség kell a virágaihoz."
+        },
+        {
+          "de": "Lena nimmt den Schlüssel und geht nach oben.",
+          "hu": "Lena fogja a kulcsot, és felmegy."
+        },
+        {
+          "de": "Die Blumen sind trocken, aber sie leben noch.",
+          "hu": "A virágok szárazak, de még élnek."
+        },
+        {
+          "de": "Jeden Abend gießt sie die Blumen und öffnet das Fenster.",
+          "hu": "Minden este megöntözi a virágokat, és kinyitja az ablakot."
+        },
+        {
+          "de": "Nach einer Woche kommt die Nachbarin zurück und sagt danke.",
+          "hu": "Egy hét után visszajön a szomszédasszony, és megköszöni."
+        }
+      ]
+    }
+  ]
+}

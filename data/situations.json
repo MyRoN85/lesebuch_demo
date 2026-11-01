@@ -1,0 +1,98 @@
+{
+  "level": "A1",
+  "groups": [
+    {
+      "de": "Amt und Geld",
+      "hu": "Hivatal és pénz",
+      "situations": [
+        {
+          "id": "a1-amt-buergerbuero",
+          "titleDe": "Beim Bürgerbüro",
+          "titleHu": "A lakcímhivatalban",
+          "subtitleDe": "Termin, Dokumente, Formular",
+          "turns": [
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Guten Tag! Haben Sie einen Termin?",
+              "hu": "Jó napot! Van időpontja?"
+            },
+            {
+              "speaker": "Kundin",
+              "de": "Ja, um zehn Uhr. Hier ist mein Ausweis.",
+              "hu": "Igen, tíz órára. Itt az igazolványom."
+            },
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Danke. Wo wohnen Sie jetzt?",
+              "hu": "Köszönöm. Hol lakik most?"
+            },
+            {
+              "speaker": "Kundin",
+              "de": "In der Gartenstraße zwölf, in Schweinfurt.",
+              "hu": "A Gartenstraße tizenkettőben, Schweinfurtban."
+            },
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Seit wann wohnen Sie dort?",
+              "hu": "Mióta lakik ott?"
+            },
+            {
+              "speaker": "Kundin",
+              "de": "Seit dem ersten März.",
+              "hu": "Március elseje óta."
+            },
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Bitte füllen Sie das Formular aus.",
+              "hu": "Kérjük, töltse ki az űrlapot."
+            },
+            {
+              "speaker": "Kundin",
+              "de": "Muss ich alles ausfüllen?",
+              "hu": "Mindent ki kell töltenem?"
+            },
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Nur Name, Adresse und Geburtsdatum.",
+              "hu": "Csak nevet, címet és születési dátumot."
+            },
+            {
+              "speaker": "Kundin",
+              "de": "Fertig. Bekomme ich eine Bestätigung?",
+              "hu": "Kész. Kapok visszaigazolást?"
+            },
+            {
+              "speaker": "Mitarbeiter",
+              "de": "Ja, hier. Willkommen in unserer Stadt!",
+              "hu": "Igen, itt van. Üdvözöljük a városunkban!"
+            },
+            {
+              "speaker": "Kundin",
+              "de": "Vielen Dank! Auf Wiedersehen.",
+              "hu": "Nagyon köszönöm! Viszontlátásra."
+            }
+          ],
+          "phrases": [
+            {
+              "de": "Ich habe einen Termin.",
+              "hu": "Van időpontom."
+            },
+            {
+              "de": "Welche Dokumente brauche ich?",
+              "hu": "Milyen dokumentumok kellenek?"
+            },
+            {
+              "de": "Wo muss ich unterschreiben?",
+              "hu": "Hol kell aláírnom?"
+            },
+            {
+              "de": "Könnten Sie mir bitte helfen?",
+              "hu": "Tudna kérem segíteni?"
+            }
+          ],
+          "tip": "Az „ausfüllen” elváló igekötős ige: a „füllen” a mondat közepén, az „aus” a végén áll: „Bitte füllen Sie das Formular aus.” Ugyanezt látod a kérdésben is: „Muss ich alles ausfüllen?”"
+        }
+      ]
+    }
+  ]
+}
